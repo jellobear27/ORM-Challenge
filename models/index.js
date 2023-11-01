@@ -1,34 +1,37 @@
-// import models
+// Import the necessary models for your database schema
 const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
 const ProductTag = require('./ProductTag');
 
-// Products belongsTo Category
+// Define associations between the models using Sequelize's ORM
+
+// A product belongs to a category with a foreign key 'category_id',
+// and if the category is deleted, the product is also deleted (CASCADE).
 Product.belongsTo(Category, {
   foreignKey: 'category_id',
   onDelete: 'CASCADE',
 });
 
-// Categories have many Products
+// A category has many products associated with it using the 'category_id' foreign key.
 Category.hasMany(Product, {
   foreignKey: 'category_id',
 });
 
-// Products belongToMany Tags (through ProductTag)
+// A product can have many tags, and a tag can be associated with many products
+// through the 'ProductTag' model as an intermediary table.
 Product.belongsToMany(Tag, {
   through: ProductTag,
-  // as: 'product_tags',
   foreignKey: 'product_id',
 });
 
-// Tags belongToMany Products (through ProductTag)
+// Similarly, a tag can be associated with many products through the 'ProductTag' model.
 Tag.belongsToMany(Product, {
   through: ProductTag,
-  // as: 'product_tags',
   foreignKey: 'tag_id',
 });
 
+// Export the models to be used in other parts of your application
 module.exports = {
   Product,
   Category,
