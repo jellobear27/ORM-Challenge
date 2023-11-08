@@ -11,6 +11,7 @@ This is the README.md file for an E-commerce back-end application, which serves 
 - [Database](#database)
 - [API Routes](#api-routes)
 - [Contributing](#contributing)
+- [Insomnia-Test-Video](#insomnia-test-video)
 - [Credits](#credits)
 - [Contact](#contact)
 
@@ -38,7 +39,7 @@ git clone: https://github.com/jellobear27/ORM-Challenge.git
 5. Start the application: npm start
 
 
-The application will run on http://localhost:3001.
+The application will run on http://localhost:3005.
 
 ## Usage
 The E-commerce back-end application provides a set of API endpoints for managing products, categories, and tags. You can interact with the API using tools like [Postman](https://www.postman.com/) or by integrating it into your front-end application.
@@ -81,6 +82,8 @@ The application provides the following API routes:
 
 ## Contributing
 Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+
+## insomnia-test-video: https://drive.google.com/file/d/1iX0PaDjnCanEQv7jqygaoFB3nuiTs_7T/view?usp=sharing
 
 
 ## Credits
